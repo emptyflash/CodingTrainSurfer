@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0lrpf3mmjdsx"]
+
+[ext_resource type="PackedScene" uid="uid://dfxo2jwbj4aeh" path="res://coin/coin.tscn" id="2_chew2"]
+[ext_resource type="PackedScene" uid="uid://dmlvwah3ypol0" path="res://stage/grid_map.scn" id="4_larli"]
+[ext_resource type="PackedScene" uid="uid://cc4idhykjp5f5" path="res://player/player.tscn" id="4_ray4s"]
+
+[sub_resource type="Environment" id="Environment_0etyi"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_y2gie"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Coins" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -12)
+
+[node name="Coin45" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4803, 0.301548, 8.72929)
+
+[node name="Coin46" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4803, 0.301548, 7.51059)
+
+[node name="Coin47" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5698, 2.45619, 1.96647)
+
+[node name="Coin48" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5328, 2.47801, 0.17407)
+
+[node name="Coin49" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0212, 2.15168, -1.68424)
+
+[node name="Coin50" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0546, 2.24617, -3.46913)
+
+[node name="Coin51" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3711, 2.35889, -4.82608)
+
+[node name="Coin52" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6416, 0.301548, -12.2915)
+
+[node name="Coin53" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9917, 0.317402, -15.615)
+
+[node name="Coin54" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9547, 0.339221, -17.4074)
+
+[node name="Coin55" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4431, 0.012886, -19.2657)
+
+[node name="Coin56" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4764, 0.107376, -21.0506)
+
+[node name="Coin57" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.793, 0.220095, -22.4075)
+
+[node name="Coin58" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0834, 0.317402, -36.183)
+
+[node name="Coin59" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0464, 0.339221, -37.9754)
+
+[node name="Coin60" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5348, 0.012886, -39.8337)
+
+[node name="Coin61" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5682, 0.107376, -41.6186)
+
+[node name="Coin62" parent="Coins" instance=ExtResource("2_chew2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8848, 0.220095, -42.9756)
+
+[node name="Player" parent="." instance=ExtResource("4_ray4s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.02042, 0, 1.933)
+
+[node name="Stage" parent="." instance=ExtResource("4_larli")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Stage"]
+environment = SubResource("Environment_0etyi")
+camera_attributes = SubResource("CameraAttributesPractical_y2gie")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Stage/WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 51.4832, 8.49525)
+light_energy = 1.162
+omni_range = 1385.52
+omni_attenuation = 1.18921
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Stage"]
+transform = Transform3D(0.403677, 0.804892, -0.434963, -0.529813, 0.59325, 0.606096, 0.745884, -0.014218, 0.665924, -1.44584e-06, 28.0205, 33.077)

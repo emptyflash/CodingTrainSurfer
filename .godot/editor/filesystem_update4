@@ -1,0 +1,4 @@
+res://stage/grid_map.scn
+res://player/player.tscn
+res://game.tscn
+res://player/jump.res
